@@ -2,14 +2,18 @@ package com.playquiz.quizapp;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Data
 @Entity
 @Table(name="questions")
 public class Question {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String questionTitle;
     private String option1;
@@ -19,4 +23,8 @@ public class Question {
     private String rightAnswer;
     private String difficultyLevel;
     private String category;
+
+    public Integer getId() {
+        return id;
+    }
 }
