@@ -1,12 +1,8 @@
-package com.playquiz.quizapp;
+package com.playquiz.quizapp.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 @Data
 @Entity
 @Table(name="questions")
@@ -24,7 +20,4 @@ public class Question {
     private String difficultyLevel;
     private String category;
 
-    public Integer getId() {
-        return id;
-    }
 }
